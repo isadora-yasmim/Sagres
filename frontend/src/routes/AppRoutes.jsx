@@ -1,4 +1,11 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 import LandingPage from '../pages/Landing/LandingPage'
 import RankingPage from '../pages/Ranking/RankingPage'
 import TermosPage from '../pages/Legal/TermosPage'
@@ -11,18 +18,13 @@ import LinkSentPage from '../pages/LinkSent/LinkSentPage'
 import ResetPasswordPage from '../pages/ResetPassword/ResetPasswordPage'
 import LinkExpiredPage from '../pages/LinkExpired/LinkExpiredPage'
 import PrivateRoute from './PrivateRoute'
-
-function Placeholder({ title }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <p style={{ fontFamily: 'sans-serif', color: '#6b7e96', fontSize: '1.25rem' }}>{title}</p>
-    </div>
-  )
-}
+import DashboardPage from '../pages/Dashboard/DashboardPage'
 
 function AppRoutes() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       {/* Rotas públicas */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/ranking" element={<RankingPage />} />
@@ -38,12 +40,13 @@ function AppRoutes() {
 
       {/* Rotas privadas */}
       <Route element={<PrivateRoute />}>
-        <Route path="/dashboard" element={<Placeholder title="Dashboard" />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Route>
 
       {/* Qualquer rota desconhecida volta para a raiz */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   )
 }
 

@@ -33,9 +33,9 @@ function mockMarkConfirmed(email) {
 }
 
 // Constrói um JWT com payload decodificável para uso nos mocks
-function buildMockToken() {
+function buildMockToken(email) {
   const payload = btoa(
-    JSON.stringify({ sub: 'teste@discente.ufg.br', role: 'ALUNO', exp: 9999999999 })
+    JSON.stringify({ sub: email, role: 'ALUNO', exp: 9999999999 })
   )
     .replace(/\+/g, '-')
     .replace(/\//g, '_')
@@ -113,6 +113,10 @@ function isStrongPassword(password) {
 
 // ─── Métodos de autenticação ───────────────────────────────────────
 
+export function confirmarEmailMock(email) {
+  if (USE_MOCK && email) mockMarkConfirmed(email)
+}
+
 export async function cadastrar(data) {
   if (USE_MOCK) {
     await delay(MOCK_DELAY)
@@ -134,13 +138,13 @@ export async function login(data) {
       if (!mockIsConfirmed(data.email)) {
         return mockError(403, 'E-mail ainda não confirmado.')
       }
-      return { token: buildMockToken() }
+      return { token: buildMockToken(data.email) }
     }
     // Regra geral: e-mail institucional + senha forte → sucesso
     if (!isInstitutionalEmail(data.email) || !isStrongPassword(data.senha)) {
       return mockError(401, 'Credenciais inválidas.')
     }
-    return { token: buildMockToken() }
+    return { token: buildMockToken(data.email) }
   }
   const res = await api.post('/api/auth/login', data)
   return res.data

@@ -5,10 +5,10 @@ function AuthLayout({ illustration, narrativeTitle, narrativeText, children }) {
   return (
     <div className={styles.layout}>
       <aside className={styles.panel} aria-hidden="true">
-        <div className={styles.panelLogo}>
+        <a href="/" className={styles.panelLogo} aria-label="SAGRES — página inicial">
           <img src={iconImg} alt="" width={28} height={28} />
           <span className={styles.panelLogoText}>SAGRES</span>
-        </div>
+        </a>
 
         {illustration && (
           <div className={styles.illustration}>{illustration}</div>
