@@ -1,39 +1,5 @@
 # Como executar o SAGRES Monitoria
 
-## Modo mock (recomendado para desenvolvimento de frontend)
-
-Roda apenas o frontend com dados simulados — não precisa de Docker, banco ou backend.
-
-### 1. Configure o `.env`
-
-```bash
-cp frontend/.env.example frontend/.env
-```
-
-Abra `frontend/.env` e certifique-se de que está assim:
-
-```env
-VITE_API_BASE_URL=http://localhost:8080
-VITE_USE_MOCK=true
-```
-
-### 2. Instale as dependências (só na primeira vez)
-
-```bash
-cd frontend
-npm install
-```
-
-### 3. Inicie o servidor de desenvolvimento
-
-```bash
-npm run dev
-```
-
-Acesse: **http://localhost:5173**
-
----
-
 ## Modo completo (frontend + backend + banco)
 
 ### Pré-requisitos
