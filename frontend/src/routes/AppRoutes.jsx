@@ -3,6 +3,8 @@ import LandingPage from '../pages/Landing/LandingPage'
 import RankingPage from '../pages/Ranking/RankingPage'
 import TermosPage from '../pages/Legal/TermosPage'
 import PrivacidadePage from '../pages/Legal/PrivacidadePage'
+import RegisterPage from '../pages/Register/RegisterPage'
+import ConfirmEmailPage from '../pages/ConfirmEmail/ConfirmEmailPage'
 import PrivateRoute from './PrivateRoute'
 
 // Placeholders temporários — substituídos conforme as páginas forem implementadas
@@ -22,9 +24,9 @@ function AppRoutes() {
       <Route path="/ranking" element={<RankingPage />} />
       <Route path="/termos" element={<TermosPage />} />
       <Route path="/privacidade" element={<PrivacidadePage />} />
-      <Route path="/cadastro" element={<Placeholder title="Criar Conta" />} />
+      <Route path="/cadastro" element={<RegisterPage />} />
       <Route path="/login" element={<Placeholder title="Login" />} />
-      <Route path="/confirmar-email" element={<Placeholder title="Confirmar E-mail" />} />
+      <Route path="/confirmar-email" element={<ConfirmEmailPage />} />
       <Route path="/esqueci-senha" element={<Placeholder title="Esqueci Minha Senha" />} />
       <Route path="/nova-senha/:token" element={<Placeholder title="Nova Senha" />} />
 
