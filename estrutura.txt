@@ -1,0 +1,430 @@
+.
+├── ./backend
+│   ├── ./backend/.mvn
+│   │   └── ./backend/.mvn/wrapper
+│   │       ├── ./backend/.mvn/wrapper/MavenWrapperDownloader.java
+│   │       ├── ./backend/.mvn/wrapper/maven-wrapper.jar
+│   │       └── ./backend/.mvn/wrapper/maven-wrapper.properties
+│   ├── ./backend/mvnw
+│   ├── ./backend/mvnw.cmd
+│   ├── ./backend/pom.xml
+│   ├── ./backend/run.log
+│   ├── ./backend/src
+│   │   ├── ./backend/src/main
+│   │   │   ├── ./backend/src/main/java
+│   │   │   │   └── ./backend/src/main/java/com
+│   │   │   │       └── ./backend/src/main/java/com/sagres
+│   │   │   │           ├── ./backend/src/main/java/com/sagres/modulo_usuario
+│   │   │   │           │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application
+│   │   │   │           │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/api
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/api/AuthController.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/api/GlobalExceptionHandler.java
+│   │   │   │           │   │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/application/api/PublicoController.java
+│   │   │   │           │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/CadastrarRequest.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/EsqueciSenhaRequest.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/LoginRequest.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/MensagemResponse.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/MonitorRankingResponse.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/RedefinirSenhaRequest.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/ReenviarConfirmacaoRequest.java
+│   │   │   │           │   │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/application/dto/TokenResponse.java
+│   │   │   │           │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/application/service
+│   │   │   │           │   │       ├── ./backend/src/main/java/com/sagres/modulo_usuario/application/service/EmailService.java
+│   │   │   │           │   │       └── ./backend/src/main/java/com/sagres/modulo_usuario/application/service/UsuarioService.java
+│   │   │   │           │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain
+│   │   │   │           │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/entity
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/entity/RoleUsuario.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/entity/TipoToken.java
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/entity/TokenEmail.java
+│   │   │   │           │   │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/domain/entity/Usuario.java
+│   │   │   │           │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/repository
+│   │   │   │           │   │   │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/domain/repository/TokenEmailRepository.java
+│   │   │   │           │   │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/domain/repository/UsuarioRepository.java
+│   │   │   │           │   │   └── ./backend/src/main/java/com/sagres/modulo_usuario/domain/vo
+│   │   │   │           │   │       └── ./backend/src/main/java/com/sagres/modulo_usuario/domain/vo/EmailInstitucional.java
+│   │   │   │           │   └── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure
+│   │   │   │           │       ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailEntity.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailJpaRepository.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailMapper.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailRepositoryAdapter.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioEntity.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioJpaRepository.java
+│   │   │   │           │       │   ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioMapper.java
+│   │   │   │           │       │   └── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioRepositoryAdapter.java
+│   │   │   │           │       └── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/security
+│   │   │   │           │           ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/security/AsyncConfig.java
+│   │   │   │           │           ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/security/JwtAuthFilter.java
+│   │   │   │           │           ├── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/security/JwtService.java
+│   │   │   │           │           └── ./backend/src/main/java/com/sagres/modulo_usuario/infrastructure/security/SecurityConfig.java
+│   │   │   │           ├── ./backend/src/main/java/com/sagres/SagresApplication.java
+│   │   │   │           └── ./backend/src/main/java/com/sagres/shared
+│   │   │   │               └── ./backend/src/main/java/com/sagres/shared/exception
+│   │   │   │                   ├── ./backend/src/main/java/com/sagres/shared/exception/ConflictException.java
+│   │   │   │                   ├── ./backend/src/main/java/com/sagres/shared/exception/DomainException.java
+│   │   │   │                   └── ./backend/src/main/java/com/sagres/shared/exception/TokenInvalidoException.java
+│   │   │   └── ./backend/src/main/resources
+│   │   │       ├── ./backend/src/main/resources/application-dev.properties
+│   │   │       ├── ./backend/src/main/resources/application.properties
+│   │   │       └── ./backend/src/main/resources/db
+│   │   │           └── ./backend/src/main/resources/db/migration
+│   │   │               ├── ./backend/src/main/resources/db/migration/V1__create_usuarios.sql
+│   │   │               ├── ./backend/src/main/resources/db/migration/V2__create_tokens_email.sql
+│   │   │               └── ./backend/src/main/resources/db/migration/V3__seed_monitores_ranking.sql
+│   │   └── ./backend/src/test
+│   │       └── ./backend/src/test/java
+│   │           └── ./backend/src/test/java/com
+│   │               └── ./backend/src/test/java/com/sagres
+│   │                   └── ./backend/src/test/java/com/sagres/modulo_usuario
+│   │                       ├── ./backend/src/test/java/com/sagres/modulo_usuario/application
+│   │                       │   ├── ./backend/src/test/java/com/sagres/modulo_usuario/application/api
+│   │                       │   │   └── ./backend/src/test/java/com/sagres/modulo_usuario/application/api/AuthControllerTest.java
+│   │                       │   └── ./backend/src/test/java/com/sagres/modulo_usuario/application/service
+│   │                       │       └── ./backend/src/test/java/com/sagres/modulo_usuario/application/service/UsuarioServiceTest.java
+│   │                       ├── ./backend/src/test/java/com/sagres/modulo_usuario/domain
+│   │                       │   └── ./backend/src/test/java/com/sagres/modulo_usuario/domain/vo
+│   │                       │       └── ./backend/src/test/java/com/sagres/modulo_usuario/domain/vo/EmailInstitucionalTest.java
+│   │                       └── ./backend/src/test/java/com/sagres/modulo_usuario/infrastructure
+│   │                           └── ./backend/src/test/java/com/sagres/modulo_usuario/infrastructure/security
+│   │                               └── ./backend/src/test/java/com/sagres/modulo_usuario/infrastructure/security/JwtServiceTest.java
+│   └── ./backend/target
+│       ├── ./backend/target/classes
+│       │   ├── ./backend/target/classes/application-dev.properties
+│       │   ├── ./backend/target/classes/application.properties
+│       │   ├── ./backend/target/classes/com
+│       │   │   └── ./backend/target/classes/com/sagres
+│       │   │       ├── ./backend/target/classes/com/sagres/modulo_usuario
+│       │   │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application
+│       │   │       │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/api
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/api/AuthController.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/api/GlobalExceptionHandler.class
+│       │   │       │   │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/application/api/PublicoController.class
+│       │   │       │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/CadastrarRequest.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/EsqueciSenhaRequest.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/LoginRequest.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/MensagemResponse.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/MonitorRankingResponse.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/RedefinirSenhaRequest.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/ReenviarConfirmacaoRequest.class
+│       │   │       │   │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/application/dto/TokenResponse.class
+│       │   │       │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/application/service
+│       │   │       │   │       ├── ./backend/target/classes/com/sagres/modulo_usuario/application/service/EmailService.class
+│       │   │       │   │       └── ./backend/target/classes/com/sagres/modulo_usuario/application/service/UsuarioService.class
+│       │   │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain
+│       │   │       │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/entity
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/entity/RoleUsuario.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/entity/TipoToken.class
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/entity/TokenEmail.class
+│       │   │       │   │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/domain/entity/Usuario.class
+│       │   │       │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/repository
+│       │   │       │   │   │   ├── ./backend/target/classes/com/sagres/modulo_usuario/domain/repository/TokenEmailRepository.class
+│       │   │       │   │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/domain/repository/UsuarioRepository.class
+│       │   │       │   │   └── ./backend/target/classes/com/sagres/modulo_usuario/domain/vo
+│       │   │       │   │       └── ./backend/target/classes/com/sagres/modulo_usuario/domain/vo/EmailInstitucional.class
+│       │   │       │   └── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure
+│       │   │       │       ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailEntity$TokenEmailEntityBuilder.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailEntity.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailJpaRepository.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailMapper.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/TokenEmailRepositoryAdapter.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioEntity$UsuarioEntityBuilder.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioEntity.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioJpaRepository.class
+│       │   │       │       │   ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioMapper.class
+│       │   │       │       │   └── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/persistence/UsuarioRepositoryAdapter.class
+│       │   │       │       └── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/security
+│       │   │       │           ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/security/AsyncConfig.class
+│       │   │       │           ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/security/JwtAuthFilter.class
+│       │   │       │           ├── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/security/JwtService.class
+│       │   │       │           └── ./backend/target/classes/com/sagres/modulo_usuario/infrastructure/security/SecurityConfig.class
+│       │   │       ├── ./backend/target/classes/com/sagres/SagresApplication.class
+│       │   │       └── ./backend/target/classes/com/sagres/shared
+│       │   │           └── ./backend/target/classes/com/sagres/shared/exception
+│       │   │               ├── ./backend/target/classes/com/sagres/shared/exception/ConflictException.class
+│       │   │               ├── ./backend/target/classes/com/sagres/shared/exception/DomainException.class
+│       │   │               └── ./backend/target/classes/com/sagres/shared/exception/TokenInvalidoException.class
+│       │   └── ./backend/target/classes/db
+│       │       └── ./backend/target/classes/db/migration
+│       │           ├── ./backend/target/classes/db/migration/V1__create_usuarios.sql
+│       │           ├── ./backend/target/classes/db/migration/V2__create_tokens_email.sql
+│       │           └── ./backend/target/classes/db/migration/V3__seed_monitores_ranking.sql
+│       ├── ./backend/target/generated-sources
+│       │   └── ./backend/target/generated-sources/annotations
+│       ├── ./backend/target/generated-test-sources
+│       │   └── ./backend/target/generated-test-sources/test-annotations
+│       ├── ./backend/target/maven-status
+│       │   └── ./backend/target/maven-status/maven-compiler-plugin
+│       │       └── ./backend/target/maven-status/maven-compiler-plugin/compile
+│       │           └── ./backend/target/maven-status/maven-compiler-plugin/compile/default-compile
+│       │               ├── ./backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+│       │               └── ./backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+│       └── ./backend/target/test-classes
+│           └── ./backend/target/test-classes/com
+│               └── ./backend/target/test-classes/com/sagres
+│                   └── ./backend/target/test-classes/com/sagres/modulo_usuario
+│                       ├── ./backend/target/test-classes/com/sagres/modulo_usuario/application
+│                       │   ├── ./backend/target/test-classes/com/sagres/modulo_usuario/application/api
+│                       │   │   └── ./backend/target/test-classes/com/sagres/modulo_usuario/application/api/AuthControllerTest.class
+│                       │   └── ./backend/target/test-classes/com/sagres/modulo_usuario/application/service
+│                       │       └── ./backend/target/test-classes/com/sagres/modulo_usuario/application/service/UsuarioServiceTest.class
+│                       ├── ./backend/target/test-classes/com/sagres/modulo_usuario/domain
+│                       │   └── ./backend/target/test-classes/com/sagres/modulo_usuario/domain/vo
+│                       │       └── ./backend/target/test-classes/com/sagres/modulo_usuario/domain/vo/EmailInstitucionalTest.class
+│                       └── ./backend/target/test-classes/com/sagres/modulo_usuario/infrastructure
+│                           └── ./backend/target/test-classes/com/sagres/modulo_usuario/infrastructure/security
+│                               └── ./backend/target/test-classes/com/sagres/modulo_usuario/infrastructure/security/JwtServiceTest.class
+├── ./backlog.md
+├── ./docker-compose.yml
+├── ./.editorconfig
+├── ./estrutura.txt
+├── ./frontend
+│   ├── ./frontend/.env
+│   ├── ./frontend/.env.example
+│   ├── ./frontend/.eslintrc.cjs
+│   ├── ./frontend/.package.json
+│   ├── ./frontend/.prettierignore
+│   └── ./frontend/.prettierrc
+├── ./.git
+│   ├── ./.git/COMMIT_EDITMSG
+│   ├── ./.git/config
+│   ├── ./.git/description
+│   ├── ./.git/FETCH_HEAD
+│   ├── ./.git/HEAD
+│   ├── ./.git/hooks
+│   │   ├── ./.git/hooks/applypatch-msg.sample
+│   │   ├── ./.git/hooks/commit-msg.sample
+│   │   ├── ./.git/hooks/fsmonitor-watchman.sample
+│   │   ├── ./.git/hooks/post-update.sample
+│   │   ├── ./.git/hooks/pre-applypatch.sample
+│   │   ├── ./.git/hooks/pre-commit.sample
+│   │   ├── ./.git/hooks/pre-merge-commit.sample
+│   │   ├── ./.git/hooks/prepare-commit-msg.sample
+│   │   ├── ./.git/hooks/pre-push.sample
+│   │   ├── ./.git/hooks/pre-rebase.sample
+│   │   ├── ./.git/hooks/pre-receive.sample
+│   │   ├── ./.git/hooks/push-to-checkout.sample
+│   │   ├── ./.git/hooks/sendemail-validate.sample
+│   │   └── ./.git/hooks/update.sample
+│   ├── ./.git/index
+│   ├── ./.git/info
+│   │   └── ./.git/info/exclude
+│   ├── ./.git/logs
+│   │   ├── ./.git/logs/HEAD
+│   │   └── ./.git/logs/refs
+│   │       ├── ./.git/logs/refs/heads
+│   │       │   ├── ./.git/logs/refs/heads/develop
+│   │       │   ├── ./.git/logs/refs/heads/feat
+│   │       │   │   ├── ./.git/logs/refs/heads/feat/base-e-dominio
+│   │       │   │   └── ./.git/logs/refs/heads/feat/services-seguranca-controllers
+│   │       │   ├── ./.git/logs/refs/heads/infra
+│   │       │   │   └── ./.git/logs/refs/heads/infra/configuracao-ambiente
+│   │       │   └── ./.git/logs/refs/heads/main
+│   │       └── ./.git/logs/refs/remotes
+│   │           └── ./.git/logs/refs/remotes/origin
+│   │               ├── ./.git/logs/refs/remotes/origin/develop
+│   │               ├── ./.git/logs/refs/remotes/origin/feat
+│   │               │   ├── ./.git/logs/refs/remotes/origin/feat/auth-frontend
+│   │               │   ├── ./.git/logs/refs/remotes/origin/feat/base-e-dominio
+│   │               │   └── ./.git/logs/refs/remotes/origin/feat/services-seguranca-controllers
+│   │               ├── ./.git/logs/refs/remotes/origin/HEAD
+│   │               ├── ./.git/logs/refs/remotes/origin/infra
+│   │               │   └── ./.git/logs/refs/remotes/origin/infra/configuracao-ambiente
+│   │               └── ./.git/logs/refs/remotes/origin/main
+│   ├── ./.git/objects
+│   │   ├── ./.git/objects/02
+│   │   │   └── ./.git/objects/02/251f4b956c55af2d76fd0788124d7eee2b45eb
+│   │   ├── ./.git/objects/09
+│   │   │   └── ./.git/objects/09/918fa838396acfbf7e05ec82c25168c5ff20a6
+│   │   ├── ./.git/objects/0a
+│   │   │   └── ./.git/objects/0a/f07a4e5eda7388343627d32a76191c3e3973e3
+│   │   ├── ./.git/objects/10
+│   │   │   └── ./.git/objects/10/47867f941f71316f3bf12fceed53c34614e42d
+│   │   ├── ./.git/objects/12
+│   │   │   └── ./.git/objects/12/b9e4ea23e77d63704577bcc70a616aa4086031
+│   │   ├── ./.git/objects/14
+│   │   │   └── ./.git/objects/14/bf627136df774d84ddcf36b09b87686d2fab22
+│   │   ├── ./.git/objects/1e
+│   │   │   ├── ./.git/objects/1e/349bf5e25ec08dac67fa9b036cf5d4885ec28b
+│   │   │   └── ./.git/objects/1e/bd9266ae0494f3fc036076559bfa07eb21a0aa
+│   │   ├── ./.git/objects/22
+│   │   │   └── ./.git/objects/22/86c82faa4096c29a6dd2c9ebd64b0cdde28897
+│   │   ├── ./.git/objects/26
+│   │   │   └── ./.git/objects/26/260fad35a15c5b3aa75d63f2f103cccf53afaa
+│   │   ├── ./.git/objects/29
+│   │   │   ├── ./.git/objects/29/037ea487e6a6868b4c693366cd74c02a6ff465
+│   │   │   └── ./.git/objects/29/62945b0b72c1fe43feac1fe7f1b979e9e0341d
+│   │   ├── ./.git/objects/2a
+│   │   │   └── ./.git/objects/2a/2943f0cc41dd57d527c338a66a3842d6643e51
+│   │   ├── ./.git/objects/2c
+│   │   │   └── ./.git/objects/2c/6fb77e749132fa6af91034d8df92c9275931c7
+│   │   ├── ./.git/objects/30
+│   │   │   └── ./.git/objects/30/c7db7b666d9ffae55cdd5890f187de503fc66b
+│   │   ├── ./.git/objects/37
+│   │   │   ├── ./.git/objects/37/12cb79ed4ca18cf52d1d45d823cb8c676154fb
+│   │   │   └── ./.git/objects/37/9dd1165400fb7af2e7749e7b5282a5e785c5df
+│   │   ├── ./.git/objects/3d
+│   │   │   └── ./.git/objects/3d/f4ca22e9f01f1b7995a261c496d79e7c69e2f1
+│   │   ├── ./.git/objects/49
+│   │   │   └── ./.git/objects/49/f6f54e16d0a62fcc5c4a4f9a9f8184c5b69ff7
+│   │   ├── ./.git/objects/4a
+│   │   │   └── ./.git/objects/4a/627543427fe2d07e168a4f90dc39fca75cf8da
+│   │   ├── ./.git/objects/4b
+│   │   │   └── ./.git/objects/4b/6116f79396144f588d150f1a691051f96cb1fa
+│   │   ├── ./.git/objects/4c
+│   │   │   └── ./.git/objects/4c/d29bd3ce6de026260744cea9a1d6aeab90916e
+│   │   ├── ./.git/objects/4d
+│   │   │   └── ./.git/objects/4d/439b2079222bf80d56e88e842e96f8b19e978d
+│   │   ├── ./.git/objects/4e
+│   │   │   └── ./.git/objects/4e/8ae8ee687ca33ce352b448132fd7a2b1dd19dd
+│   │   ├── ./.git/objects/4f
+│   │   │   └── ./.git/objects/4f/0fe360d25bdcf39de7e624a4f6e779eccd548c
+│   │   ├── ./.git/objects/51
+│   │   │   └── ./.git/objects/51/01b674df391399da71c767aa5c976426c9dc7a
+│   │   ├── ./.git/objects/59
+│   │   │   └── ./.git/objects/59/f4aef9e3d6dcf3a6b54d6ace71578568c5eaf2
+│   │   ├── ./.git/objects/5a
+│   │   │   └── ./.git/objects/5a/b9665aba792e20e3c225c0983e47f7dd238f5e
+│   │   ├── ./.git/objects/5b
+│   │   │   └── ./.git/objects/5b/2d19446c7bc27b8a9b70fd7f6f40bf3c246c5a
+│   │   ├── ./.git/objects/65
+│   │   │   └── ./.git/objects/65/4d993a88ece983315af55426f7a0c68691c286
+│   │   ├── ./.git/objects/67
+│   │   │   └── ./.git/objects/67/7b32ccb24a0f6b4599dd0bdd52f3a23f3afaea
+│   │   ├── ./.git/objects/68
+│   │   │   ├── ./.git/objects/68/6177e1c45d52584f860b9029c42d7d25acdcbd
+│   │   │   └── ./.git/objects/68/93eb13237060adc0c968a690149a49faa2d7d3
+│   │   ├── ./.git/objects/69
+│   │   │   └── ./.git/objects/69/eda7966d9b191004717e389435e664c4765180
+│   │   ├── ./.git/objects/6a
+│   │   │   ├── ./.git/objects/6a/228c71e113afd720b19107372e70cc0d46d3bb
+│   │   │   └── ./.git/objects/6a/e6301fb77840ec2239333e7f633105741f2ba3
+│   │   ├── ./.git/objects/6f
+│   │   │   └── ./.git/objects/6f/f1713676467baf6fc5187f507acbc32ab5418c
+│   │   ├── ./.git/objects/70
+│   │   │   └── ./.git/objects/70/4f8bd82393225d7199ae33c753abe25a3265ea
+│   │   ├── ./.git/objects/73
+│   │   │   └── ./.git/objects/73/33551a01d5ef6ffaf742914fbd7773d6c204e4
+│   │   ├── ./.git/objects/7a
+│   │   │   └── ./.git/objects/7a/54547c98b278dbeaeb9cdeaad0e5bef384afee
+│   │   ├── ./.git/objects/7d
+│   │   │   ├── ./.git/objects/7d/d705cf7434c4d1add0447dda6d94809cc9c101
+│   │   │   └── ./.git/objects/7d/dd900b96b225426940efba1e6c9aff7508ad68
+│   │   ├── ./.git/objects/84
+│   │   │   └── ./.git/objects/84/5a3abb4de58401e91022df28aa56988fadd308
+│   │   ├── ./.git/objects/86
+│   │   │   └── ./.git/objects/86/35bc03e56a8d503c83fcc4d6c6774315880bb4
+│   │   ├── ./.git/objects/87
+│   │   │   └── ./.git/objects/87/997ff0e21767cf2de5553f3affdafaf087a91b
+│   │   ├── ./.git/objects/8b
+│   │   │   ├── ./.git/objects/8b/0f57b91aeb45c54467e29f983a0893dc83c4d9
+│   │   │   └── ./.git/objects/8b/bb5ee6c07004e372ddd3fd49ee75964c2c9e75
+│   │   ├── ./.git/objects/8f
+│   │   │   └── ./.git/objects/8f/31a6e1e88d674ab3a1cc471d0d7b01bd59444c
+│   │   ├── ./.git/objects/91
+│   │   │   └── ./.git/objects/91/ecc9cb3521c7be6cf4f11e81bb554c6a9ac690
+│   │   ├── ./.git/objects/95
+│   │   │   └── ./.git/objects/95/4f8b14ad46ec7146c5f9ed41df44271afbe0b6
+│   │   ├── ./.git/objects/96
+│   │   │   └── ./.git/objects/96/9f8a3be13c167c2e90ada62def5eba6b273a86
+│   │   ├── ./.git/objects/97
+│   │   │   └── ./.git/objects/97/356e3f26bd4f59b240405980d6153101857027
+│   │   ├── ./.git/objects/99
+│   │   │   └── ./.git/objects/99/3c6c9d16defcb1866ad1b5f539343536162845
+│   │   ├── ./.git/objects/9a
+│   │   │   └── ./.git/objects/9a/ce17c4868a91246931463394267b365c8f8027
+│   │   ├── ./.git/objects/9d
+│   │   │   └── ./.git/objects/9d/2c84a5e4268827cc8cf79d39f530624f2c4456
+│   │   ├── ./.git/objects/a1
+│   │   │   └── ./.git/objects/a1/6df818cd2be567f7ee304a16a153b963c65305
+│   │   ├── ./.git/objects/a3
+│   │   │   └── ./.git/objects/a3/6934d874c7fbc51aecd1c66dffc106f60693a9
+│   │   ├── ./.git/objects/a6
+│   │   │   └── ./.git/objects/a6/d757528d2316aa0d3f184996c7129d46581444
+│   │   ├── ./.git/objects/ad
+│   │   │   └── ./.git/objects/ad/3974a2b88c92b0da9cb6c6825a23d86f544446
+│   │   ├── ./.git/objects/b3
+│   │   │   └── ./.git/objects/b3/568ad36208e2855b82c62ec81e5ddbb82f83aa
+│   │   ├── ./.git/objects/b6
+│   │   │   └── ./.git/objects/b6/55159425a573e306062e3b60fd9871981bbaee
+│   │   ├── ./.git/objects/b9
+│   │   │   └── ./.git/objects/b9/b3cbb4bf6325833c11845684732a828eda55e0
+│   │   ├── ./.git/objects/bd
+│   │   │   └── ./.git/objects/bd/0247888cdc52c7df5598c7b777f103adc91ea6
+│   │   ├── ./.git/objects/c2
+│   │   │   └── ./.git/objects/c2/5e83eb0b54c6660a9feac4643cd4df6cf67386
+│   │   ├── ./.git/objects/c6
+│   │   │   └── ./.git/objects/c6/39f484add69bfe33fd0fb7cbb183b91829eed8
+│   │   ├── ./.git/objects/cb
+│   │   │   └── ./.git/objects/cb/130087b79c49662c40e8e99fa201404a6e58b0
+│   │   ├── ./.git/objects/cc
+│   │   │   └── ./.git/objects/cc/db6878be00873a4a3e9007d834ad2a39ca13ce
+│   │   ├── ./.git/objects/d7
+│   │   │   └── ./.git/objects/d7/2af88c840c604d1133546072a0ee245f8454e5
+│   │   ├── ./.git/objects/d9
+│   │   │   └── ./.git/objects/d9/ad521b8aada1681cdb830ffde88288275d5d29
+│   │   ├── ./.git/objects/dc
+│   │   │   └── ./.git/objects/dc/ed0c7318c734e8b1543f72e5031d3ac7749f6b
+│   │   ├── ./.git/objects/e3
+│   │   │   ├── ./.git/objects/e3/06589212ebab8649e6ff77dbd8ecffacafd509
+│   │   │   └── ./.git/objects/e3/82ea5440e7f9d609a7d27f4558dbff0ca38c14
+│   │   ├── ./.git/objects/e4
+│   │   │   └── ./.git/objects/e4/d03ce24bb11e820734cd76d9d9ec4dac2f7b51
+│   │   ├── ./.git/objects/e6
+│   │   │   └── ./.git/objects/e6/3a6950ad0a0f6d40737158c204fb5a3af5a0b6
+│   │   ├── ./.git/objects/e9
+│   │   │   └── ./.git/objects/e9/522193d9f796a9748e9ad8c952a5df73c87db9
+│   │   ├── ./.git/objects/ec
+│   │   │   └── ./.git/objects/ec/18774396887d48bccf78cd78c2167a6b2d7318
+│   │   ├── ./.git/objects/ed
+│   │   │   └── ./.git/objects/ed/71c8df12f3111c8bea847258140fe19e3badf8
+│   │   ├── ./.git/objects/ef
+│   │   │   └── ./.git/objects/ef/9dfac5a090bd015459da85c655c9aef50e39fe
+│   │   ├── ./.git/objects/f3
+│   │   │   └── ./.git/objects/f3/0ac13c361483000f263dca9feea0a233909908
+│   │   ├── ./.git/objects/f6
+│   │   │   └── ./.git/objects/f6/495509f5edad617e70a50dc3808dce8c3fb617
+│   │   ├── ./.git/objects/f7
+│   │   │   └── ./.git/objects/f7/6a3b59c959f7685f5b1adbe2e9a4bfd5702990
+│   │   ├── ./.git/objects/f8
+│   │   │   └── ./.git/objects/f8/02a3fe35b25e5f8ac0155f32c6c827dd418c51
+│   │   ├── ./.git/objects/f9
+│   │   │   └── ./.git/objects/f9/4d687d35d7fa6e2c619c3f2c6b2ddea19bd219
+│   │   ├── ./.git/objects/ff
+│   │   │   └── ./.git/objects/ff/76eb16f64f7ae74467956578cd11b012feb6c4
+│   │   ├── ./.git/objects/info
+│   │   └── ./.git/objects/pack
+│   │       ├── ./.git/objects/pack/pack-416872cb4113ab33568e3eb2f3ca6a6824825624.idx
+│   │       ├── ./.git/objects/pack/pack-416872cb4113ab33568e3eb2f3ca6a6824825624.pack
+│   │       └── ./.git/objects/pack/pack-416872cb4113ab33568e3eb2f3ca6a6824825624.rev
+│   ├── ./.git/ORIG_HEAD
+│   ├── ./.git/packed-refs
+│   └── ./.git/refs
+│       ├── ./.git/refs/heads
+│       │   ├── ./.git/refs/heads/develop
+│       │   ├── ./.git/refs/heads/feat
+│       │   │   ├── ./.git/refs/heads/feat/base-e-dominio
+│       │   │   └── ./.git/refs/heads/feat/services-seguranca-controllers
+│       │   ├── ./.git/refs/heads/infra
+│       │   │   └── ./.git/refs/heads/infra/configuracao-ambiente
+│       │   └── ./.git/refs/heads/main
+│       ├── ./.git/refs/remotes
+│       │   └── ./.git/refs/remotes/origin
+│       │       ├── ./.git/refs/remotes/origin/develop
+│       │       ├── ./.git/refs/remotes/origin/feat
+│       │       │   ├── ./.git/refs/remotes/origin/feat/auth-frontend
+│       │       │   ├── ./.git/refs/remotes/origin/feat/base-e-dominio
+│       │       │   └── ./.git/refs/remotes/origin/feat/services-seguranca-controllers
+│       │       ├── ./.git/refs/remotes/origin/HEAD
+│       │       ├── ./.git/refs/remotes/origin/infra
+│       │       │   └── ./.git/refs/remotes/origin/infra/configuracao-ambiente
+│       │       └── ./.git/refs/remotes/origin/main
+│       └── ./.git/refs/tags
+├── ./.gitignore
+├── ./.husky
+│   └── ./.husky/pre-commit
+└── ./README.md
+
+179 directories, 249 files

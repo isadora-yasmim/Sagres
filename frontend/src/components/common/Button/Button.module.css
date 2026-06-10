@@ -1,0 +1,151 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Variantes ───────────────────────────────────────────────── */
+
+.primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.primary:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+}
+
+.ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-white);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.outline:hover:not(:disabled) {
+  background-color: var(--color-info-light);
+}
+
+/* ─── Tamanhos ────────────────────────────────────────────────── */
+
+.sm {
+  height: 2rem;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.md {
+  height: 2.75rem;
+  padding: 0 var(--space-6);
+  font-size: var(--text-md);
+}
+
+.lg {
+  height: 3rem;
+  padding: 0 var(--space-8);
+  font-size: var(--text-lg);
+}
+
+/* ─── Variante dourada (CTAs principais de destaque) ──────────── */
+
+.gold {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.gold:hover:not(:disabled) {
+  background-color: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
+}
+
+/* ─── Outline claro (fundos escuros) ──────────────────────────── */
+
+.outlineLight {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+}
+
+.outlineLight:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+}
+
+/* ─── Branco (Navbar em fundo escuro) ─────────────────────────── */
+
+.white {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-bg);
+}
+
+.white:hover:not(:disabled) {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-100);
+}
+
+/* ─── Pill (border-radius cheio) ─────────────────────────────── */
+
+.pill {
+  border-radius: var(--radius-full);
+}
+
+/* ─── Largura total ───────────────────────────────────────────── */
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ─── Estado de loading ───────────────────────────────────────── */
+
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

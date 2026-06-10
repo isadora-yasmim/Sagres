@@ -1,0 +1,98 @@
+/* ─── Colors ──────────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --color-bg: #0e2138;
+  --color-bg-surface: #122a47;
+  --color-primary: #2a6cb8;
+  --color-primary-hover: #2460a3;
+  --color-primary-active: #1d4f8a;
+  --color-gold: #efb23c;
+  --color-gold-hover: #d99d2c;
+  --color-silver: #c8d0dc;
+  --color-bronze: #d4b89c;
+
+  /* Feedback */
+  --color-ok: #27b36b;
+  --color-ok-light: #e6f9f0;
+  --color-danger: #f0584f;
+  --color-danger-light: #fef0ef;
+  --color-warning: #efb23c;
+  --color-warning-light: #fef7e6;
+  --color-info: #2a6cb8;
+  --color-info-light: #eaf1fb;
+
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-section-alt: #edf2f8;
+  --color-gray-100: #f5f7fa;
+  --color-gray-200: #e8ecf2;
+  --color-gray-300: #cdd4e0;
+  --color-gray-400: #9aabc0;
+  --color-gray-500: #6b7e96;
+  --color-gray-700: #3a4d63;
+  --color-text: #1a2b3d;
+  --color-text-muted: #6b7e96;
+
+  /* ─── Typography ──────────────────────────────────────────────── */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Mulish', sans-serif;
+  --font-logo: 'Ovo', serif;
+
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-md: 1rem;      /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+  --text-xl: 1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;   /* 24px */
+  --text-3xl: 2rem;     /* 32px */
+  --text-4xl: 2.5rem;   /* 40px */
+  --text-5xl: 3rem;     /* 48px */
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* ─── Spacing (base 4px) ──────────────────────────────────────── */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+
+  /* ─── Borders ─────────────────────────────────────────────────── */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;
+
+  --border-color: var(--color-gray-300);
+  --border-color-focus: var(--color-primary);
+  --border-color-error: var(--color-danger);
+
+  /* ─── Text colors de feedback (contraste sobre fundos claros) ─── */
+  --color-danger-text: #b91c1c;
+  --color-warning-text: #92400e;
+  --color-info-text: #1d4f8a;
+  --color-ok-text: #166534;
+
+  /* ─── Shadows ─────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-focus-primary: 0 0 0 3px rgba(42, 108, 184, 0.15);
+  --shadow-focus-danger: 0 0 0 3px rgba(240, 88, 79, 0.15);
+
+  /* ─── Transitions ─────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+}
