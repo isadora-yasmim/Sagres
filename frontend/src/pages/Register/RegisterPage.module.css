@@ -1,0 +1,129 @@
+.illustration {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ─── Botão voltar ────────────────────────────────────────────── */
+
+.backButton {
+  position: absolute;
+  top: calc(-1 * var(--space-10));
+  left: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.backButton:hover {
+  color: var(--color-text);
+}
+
+/* ─── Formulário ──────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: var(--space-1);
+}
+
+/* ─── Campos ──────────────────────────────────────────────────── */
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.passwordWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* ─── Termos ──────────────────────────────────────────────────── */
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.termsLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 2px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.termsText {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.termsLink {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+}
+
+.termsLink:hover {
+  text-decoration: underline;
+}
+
+.termsError {
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+  padding-left: calc(1.125rem + var(--space-2));
+}
+
+/* ─── Erros e rodapé ──────────────────────────────────────────── */
+
+.serverError {
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+  text-align: center;
+}
+
+.loginLink {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.loginLinkAnchor {
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  text-decoration: none;
+}
+
+.loginLinkAnchor:hover {
+  text-decoration: underline;
+}
