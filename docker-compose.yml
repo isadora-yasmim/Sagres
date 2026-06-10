@@ -1,0 +1,40 @@
+# ──────────────────────────────────────────────
+# SAGRES Monitoria — docker-compose.yml
+# Subir: docker compose up -d
+# Verificar: docker compose ps
+# ──────────────────────────────────────────────
+
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: sagres_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sagres_db
+      POSTGRES_USER: sagres_user
+      POSTGRES_PASSWORD: sagres_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sagres_user -d sagres_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: sagres_mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"   # SMTP
+      - "8025:8025"   # Interface web
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+
+volumes:
+  postgres_data:
+    name: sagres_postgres_data
