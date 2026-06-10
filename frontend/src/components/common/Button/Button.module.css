@@ -80,6 +80,51 @@
   font-size: var(--text-lg);
 }
 
+/* ─── Variante dourada (CTAs principais de destaque) ──────────── */
+
+.gold {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+.gold:hover:not(:disabled) {
+  background-color: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
+}
+
+/* ─── Outline claro (fundos escuros) ──────────────────────────── */
+
+.outlineLight {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+}
+
+.outlineLight:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+}
+
+/* ─── Branco (Navbar em fundo escuro) ─────────────────────────── */
+
+.white {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-bg);
+}
+
+.white:hover:not(:disabled) {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-100);
+}
+
+/* ─── Pill (border-radius cheio) ─────────────────────────────── */
+
+.pill {
+  border-radius: var(--radius-full);
+}
+
 /* ─── Largura total ───────────────────────────────────────────── */
 
 .fullWidth {

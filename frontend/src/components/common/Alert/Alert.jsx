@@ -39,6 +39,18 @@ const icons = {
       />
     </svg>
   ),
+  success: (
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M6.5 10l2.5 2.5 4.5-4.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
 }
 
 function Alert({ variant = 'info', children }) {

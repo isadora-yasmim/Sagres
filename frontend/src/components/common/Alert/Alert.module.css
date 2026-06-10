@@ -51,3 +51,13 @@
 .info .icon {
   color: var(--color-info);
 }
+
+.success {
+  background-color: var(--color-ok-light);
+  border-color: var(--color-ok);
+  color: var(--color-ok-text);
+}
+
+.success .icon {
+  color: var(--color-ok);
+}

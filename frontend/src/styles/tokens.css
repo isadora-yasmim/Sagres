@@ -8,6 +8,8 @@
   --color-primary-active: #1d4f8a;
   --color-gold: #efb23c;
   --color-gold-hover: #d99d2c;
+  --color-silver: #c8d0dc;
+  --color-bronze: #d4b89c;
 
   /* Feedback */
   --color-ok: #27b36b;
@@ -21,6 +23,7 @@
 
   /* Neutral */
   --color-white: #ffffff;
+  --color-section-alt: #edf2f8;
   --color-gray-100: #f5f7fa;
   --color-gray-200: #e8ecf2;
   --color-gray-300: #cdd4e0;
@@ -33,6 +36,7 @@
   /* ─── Typography ──────────────────────────────────────────────── */
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Mulish', sans-serif;
+  --font-logo: 'Ovo', serif;
 
   --text-xs: 0.75rem;   /* 12px */
   --text-sm: 0.875rem;  /* 14px */
@@ -78,6 +82,7 @@
   --color-danger-text: #b91c1c;
   --color-warning-text: #92400e;
   --color-info-text: #1d4f8a;
+  --color-ok-text: #166534;
 
   /* ─── Shadows ─────────────────────────────────────────────────── */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
