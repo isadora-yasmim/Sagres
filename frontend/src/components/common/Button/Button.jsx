@@ -4,6 +4,7 @@ function Button({
   children,
   variant = 'primary',
   size = 'md',
+  pill = false,
   isLoading = false,
   fullWidth = false,
   type = 'button',
@@ -15,6 +16,7 @@ function Button({
     styles.button,
     styles[variant],
     styles[size],
+    pill ? styles.pill : '',
     fullWidth ? styles.fullWidth : '',
   ]
     .filter(Boolean)
@@ -29,7 +31,7 @@ function Button({
       {...props}
     >
       {isLoading && <span className={styles.spinner} aria-hidden="true" />}
-      <span>{children}</span>
+      {children}
     </button>
   )
 }
