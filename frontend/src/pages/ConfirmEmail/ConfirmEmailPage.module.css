@@ -1,0 +1,93 @@
+.illustration {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ─── Layout do conteúdo ──────────────────────────────────────── */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  width: 100%;
+}
+
+/* ─── Ícone de envelope ───────────────────────────────────────── */
+
+.iconWrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.iconCircle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelopeIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--color-primary);
+}
+
+.checkBadge {
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+/* ─── Textos ──────────────────────────────────────────────────── */
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+}
+
+.description {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.emailHighlight {
+  color: var(--color-text);
+  font-weight: var(--font-semibold);
+}
+
+.hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.changeEmailLink {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+}
+
+.changeEmailLink:hover {
+  text-decoration: underline;
+}
