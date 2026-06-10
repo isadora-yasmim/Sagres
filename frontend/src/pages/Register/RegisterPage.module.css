@@ -4,6 +4,26 @@
   object-fit: contain;
 }
 
+/* ─── Botão voltar ────────────────────────────────────────────── */
+
+.backButton {
+  position: absolute;
+  top: calc(-1 * var(--space-10));
+  left: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.backButton:hover {
+  color: var(--color-text);
+}
+
 /* ─── Formulário ──────────────────────────────────────────────── */
 
 .form {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import AuthLayout from '../../components/layout/AuthLayout/AuthLayout'
 import Input from '../../components/common/Input/Input'
 import Button from '../../components/common/Button/Button'
@@ -55,6 +55,23 @@ function RegisterPage() {
       narrativeTitle="Junte-se à tripulação."
       narrativeText="Crie sua conta com o e-mail institucional da universidade e comece a aprender, ou a ensinar."
     >
+      <button
+        type="button"
+        className={styles.backButton}
+        onClick={() => navigate(-1)}
+        aria-label="Voltar"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M19 12H5M5 12l7 7M5 12l7-7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
         <h1 className={styles.title}>CRIE SUA CONTA</h1>
 

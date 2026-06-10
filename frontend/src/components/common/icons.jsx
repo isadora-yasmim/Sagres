@@ -8,3 +8,65 @@ export function StarFilledIcon() {
     </svg>
   )
 }
+
+export function EmailSentIcon() {
+  return (
+    <div style={{ position: 'relative', display: 'inline-flex' }}>
+      <div
+        style={{
+          width: '5rem',
+          height: '5rem',
+          borderRadius: '9999px',
+          backgroundColor: 'var(--color-gray-100)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <svg
+          style={{ width: '2.25rem', height: '2.25rem', color: 'var(--color-primary)' }}
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+          <path
+            d="M2 7l10 7 10-7"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+      <span
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: '-2px',
+          width: '1.5rem',
+          height: '1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        aria-hidden="true"
+      >
+        <svg
+          viewBox="0 0 20 20"
+          fill="none"
+          style={{ width: '1.5rem', height: '1.5rem', display: 'block' }}
+        >
+          <circle cx="10" cy="10" r="10" style={{ fill: 'var(--color-ok)' }} />
+          <path
+            d="M5.5 10.5l3 3 6-6"
+            stroke="white"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
+    </div>
+  )
+}
