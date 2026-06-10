@@ -1,10 +1,11 @@
 package com.sagres.modulo_usuario.infrastructure.persistence;
 
+import com.sagres.modulo_usuario.domain.entity.RoleUsuario;
 import com.sagres.modulo_usuario.domain.entity.Usuario;
 import com.sagres.modulo_usuario.domain.repository.UsuarioRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -16,10 +17,13 @@ import java.util.UUID;
  * </p>
  */
 @Repository
-@RequiredArgsConstructor
 public class UsuarioRepositoryAdapter implements UsuarioRepository {
 
     private final UsuarioJpaRepository jpaRepository;
+
+    public UsuarioRepositoryAdapter(UsuarioJpaRepository jpaRepository) {
+        this.jpaRepository = jpaRepository;
+    }
 
     @Override
     public Usuario salvar(Usuario usuario) {
@@ -43,5 +47,13 @@ public class UsuarioRepositoryAdapter implements UsuarioRepository {
     @Override
     public boolean existePorEmail(String emailInstitucional) {
         return jpaRepository.existsByEmailInstitucional(emailInstitucional);
+    }
+
+    @Override
+    public List<Usuario> buscarTop5Monitores() {
+        List<UsuarioEntity> entities = jpaRepository.findTop5ByRole(RoleUsuario.MONITOR);
+        return entities.stream()
+                .map(e -> UsuarioMapper.toDomain(e))
+                .toList();
     }
 }
