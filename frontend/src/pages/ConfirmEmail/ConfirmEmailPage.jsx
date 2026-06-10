@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AuthLayout from '../../components/layout/AuthLayout/AuthLayout'
 import Button from '../../components/common/Button/Button'
+import { EmailSentIcon } from '../../components/common/icons'
 import { reenviarConfirmacao } from '../../services/authService'
 import { PENDING_EMAIL_KEY } from '../../constants/auth'
 import heroImg from '../../assets/hero.png'
@@ -9,42 +10,8 @@ import styles from './ConfirmEmailPage.module.css'
 
 const COUNTDOWN = 60
 
-function EmailIcon() {
-  return (
-    <div className={styles.iconWrapper}>
-      <div className={styles.iconCircle}>
-        <svg
-          className={styles.envelopeIcon}
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <rect
-            x="2" y="4" width="20" height="16" rx="2"
-            stroke="currentColor" strokeWidth="1.5"
-          />
-          <path
-            d="M2 7l10 7 10-7"
-            stroke="currentColor" strokeWidth="1.5"
-            strokeLinecap="round" strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-      <span className={styles.checkBadge} aria-hidden="true">
-        <svg viewBox="0 0 20 20" fill="none" className={styles.checkIcon}>
-          <circle cx="10" cy="10" r="10" fill="#22c55e" />
-          <path
-            d="M5.5 10.5l3 3 6-6"
-            stroke="white" strokeWidth="1.8"
-            strokeLinecap="round" strokeLinejoin="round"
-          />
-        </svg>
-      </span>
-    </div>
-  )
-}
-
 function ConfirmEmailPage() {
+  const navigate = useNavigate()
   const email = sessionStorage.getItem(PENDING_EMAIL_KEY) || ''
   const [seconds, setSeconds] = useState(COUNTDOWN)
   const [loading, setLoading] = useState(false)
@@ -67,14 +34,29 @@ function ConfirmEmailPage() {
 
   return (
     <AuthLayout
-      illustration={
-        <img src={heroImg} alt="" className={styles.illustration} />
-      }
+      illustration={<img src={heroImg} alt="" className={styles.illustration} />}
       narrativeTitle="Falta um clique"
       narrativeText="Confirme seu e-mail e a tripulação está completa."
     >
+      <button
+        type="button"
+        className={styles.backButton}
+        onClick={() => navigate(-1)}
+        aria-label="Voltar"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M19 12H5M5 12l7 7M5 12l7-7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
       <div className={styles.content}>
-        <EmailIcon />
+        <EmailSentIcon />
 
         <h1 className={styles.title}>CONFIRME SEU E-MAIL</h1>
 

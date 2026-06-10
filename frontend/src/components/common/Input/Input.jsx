@@ -27,17 +27,18 @@ const EyeOffIcon = () => (
 )
 
 const Input = forwardRef(function Input(
-  { id, label, type = 'text', placeholder, error, hint, ...props },
+  { id, label, type = 'text', placeholder, error, hint, invalid, ...props },
   ref
 ) {
   const [showPassword, setShowPassword] = useState(false)
   const isPassword = type === 'password'
   const resolvedType = isPassword ? (showPassword ? 'text' : 'password') : type
   const inputId = id ?? label?.toLowerCase().replace(/\s+/g, '-')
+  const hasError = !!error || !!invalid
 
   const inputClassNames = [
     styles.input,
-    error ? styles.inputError : '',
+    hasError ? styles.inputError : '',
     isPassword ? styles.inputWithToggle : '',
   ]
     .filter(Boolean)
@@ -57,7 +58,7 @@ const Input = forwardRef(function Input(
           type={resolvedType}
           placeholder={placeholder}
           className={inputClassNames}
-          aria-invalid={!!error}
+          aria-invalid={hasError}
           aria-describedby={
             error ? `${inputId}-error` : hint ? `${inputId}-hint` : undefined
           }

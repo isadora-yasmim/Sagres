@@ -16,6 +16,22 @@ function mockError(status, message) {
   return Promise.reject(error)
 }
 
+// Controla quais e-mails mock foram confirmados via "Reenviar e-mail"
+const MOCK_CONFIRMED_KEY = 'sagres_mock_confirmed'
+
+function mockIsConfirmed(email) {
+  const stored = localStorage.getItem(MOCK_CONFIRMED_KEY) || ''
+  return stored.split(',').includes(email)
+}
+
+function mockMarkConfirmed(email) {
+  const list = (localStorage.getItem(MOCK_CONFIRMED_KEY) || '').split(',').filter(Boolean)
+  if (!list.includes(email)) {
+    list.push(email)
+    localStorage.setItem(MOCK_CONFIRMED_KEY, list.join(','))
+  }
+}
+
 // Constrói um JWT com payload decodificável para uso nos mocks
 function buildMockToken() {
   const payload = btoa(
@@ -60,17 +76,40 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-// Em 401 limpa o token e redireciona sem depender do AuthContext
+// Em 401 limpa o token e redireciona apenas quando havia uma sessão ativa.
+// Evita que um 401 de credenciais inválidas no login redirecione antes
+// do catch da página tratar o erro.
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    if (error.response?.status === 401 && localStorage.getItem(TOKEN_KEY)) {
       localStorage.removeItem(TOKEN_KEY)
       window.location.href = '/login'
     }
     return Promise.reject(error)
   }
 )
+
+// Qualquer e-mail institucional (@ufg.br ou @discente.ufg.br) com senha forte é aceito.
+// Contas abaixo ficam com 403 até o fluxo de reenvio ser concluído.
+const UNCONFIRMED_ACCOUNTS = {
+  'julia@discente.ufg.br': 'Teste@123',
+  'stella@discente.ufg.br': 'Teste@123',
+  'cleide@discente.ufg.br': 'Teste@123',
+}
+
+function isInstitutionalEmail(email) {
+  return /^[\w.]+@(discente\.)?ufg\.br$/.test(email)
+}
+
+function isStrongPassword(password) {
+  return (
+    password.length >= 8 &&
+    /[A-Z]/.test(password) &&
+    /[0-9]/.test(password) &&
+    /[^A-Za-z0-9]/.test(password)
+  )
+}
 
 // ─── Métodos de autenticação ───────────────────────────────────────
 
@@ -86,11 +125,19 @@ export async function cadastrar(data) {
 export async function login(data) {
   if (USE_MOCK) {
     await delay(MOCK_DELAY)
-    // Credenciais de teste para simular erros nas páginas de login
-    if (data.email === 'naoconfirmado@discente.ufg.br') {
-      return mockError(403, 'E-mail ainda não confirmado.')
+    // Contas não validadas: verificam senha específica antes do 403
+    const unconfirmedPassword = UNCONFIRMED_ACCOUNTS[data.email]
+    if (unconfirmedPassword !== undefined) {
+      if (data.senha !== unconfirmedPassword) {
+        return mockError(401, 'Credenciais inválidas.')
+      }
+      if (!mockIsConfirmed(data.email)) {
+        return mockError(403, 'E-mail ainda não confirmado.')
+      }
+      return { token: buildMockToken() }
     }
-    if (data.email === 'invalido@discente.ufg.br') {
+    // Regra geral: e-mail institucional + senha forte → sucesso
+    if (!isInstitutionalEmail(data.email) || !isStrongPassword(data.senha)) {
       return mockError(401, 'Credenciais inválidas.')
     }
     return { token: buildMockToken() }
@@ -112,6 +159,7 @@ export async function confirmarEmail(token) {
 export async function reenviarConfirmacao(email) {
   if (USE_MOCK) {
     await delay(MOCK_DELAY)
+    mockMarkConfirmed(email)
     return { message: 'E-mail reenviado.' }
   }
   const res = await api.post('/api/auth/reenviar-confirmacao', { email })

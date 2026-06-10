@@ -5,9 +5,13 @@ import TermosPage from '../pages/Legal/TermosPage'
 import PrivacidadePage from '../pages/Legal/PrivacidadePage'
 import RegisterPage from '../pages/Register/RegisterPage'
 import ConfirmEmailPage from '../pages/ConfirmEmail/ConfirmEmailPage'
+import LoginPage from '../pages/Login/LoginPage'
+import ForgotPasswordPage from '../pages/ForgotPassword/ForgotPasswordPage'
+import LinkSentPage from '../pages/LinkSent/LinkSentPage'
+import ResetPasswordPage from '../pages/ResetPassword/ResetPasswordPage'
+import LinkExpiredPage from '../pages/LinkExpired/LinkExpiredPage'
 import PrivateRoute from './PrivateRoute'
 
-// Placeholders temporários — substituídos conforme as páginas forem implementadas
 function Placeholder({ title }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
@@ -25,10 +29,12 @@ function AppRoutes() {
       <Route path="/termos" element={<TermosPage />} />
       <Route path="/privacidade" element={<PrivacidadePage />} />
       <Route path="/cadastro" element={<RegisterPage />} />
-      <Route path="/login" element={<Placeholder title="Login" />} />
       <Route path="/confirmar-email" element={<ConfirmEmailPage />} />
-      <Route path="/esqueci-senha" element={<Placeholder title="Esqueci Minha Senha" />} />
-      <Route path="/nova-senha/:token" element={<Placeholder title="Nova Senha" />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/esqueci-senha" element={<ForgotPasswordPage />} />
+      <Route path="/link-enviado" element={<LinkSentPage />} />
+      <Route path="/nova-senha/:token" element={<ResetPasswordPage />} />
+      <Route path="/link-expirado" element={<LinkExpiredPage />} />
 
       {/* Rotas privadas */}
       <Route element={<PrivateRoute />}>
