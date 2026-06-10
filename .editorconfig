@@ -1,0 +1,34 @@
+# ──────────────────────────────────────────────
+# SAGRES Monitoria — .editorconfig
+# https://editorconfig.org
+# ──────────────────────────────────────────────
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Java usa 4 espaços (convenção)
+[*.java]
+indent_size = 4
+
+# XML / Maven POM
+[*.xml]
+indent_size = 4
+
+# Markdown: manter espaços no fim de linha (quebra de linha intencional)
+[*.md]
+trim_trailing_whitespace = false
+
+# YAML
+[*.{yml,yaml}]
+indent_size = 2
+
+# JSON
+[*.json]
+indent_size = 2
