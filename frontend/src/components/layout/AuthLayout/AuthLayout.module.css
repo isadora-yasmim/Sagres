@@ -1,0 +1,73 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ─── Painel esquerdo (brand) ─────────────────────────────────── */
+
+.panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding: var(--space-12) var(--space-10);
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 420px;
+  width: 100%;
+}
+
+.illustration {
+  display: flex;
+  justify-content: center;
+}
+
+.narrativeTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-white);
+  line-height: 1.15;
+}
+
+.narrativeText {
+  font-size: var(--text-md);
+  color: var(--color-gray-300);
+  line-height: 1.7;
+}
+
+/* ─── Painel direito (formulário) ────────────────────────────── */
+
+.formPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  padding: var(--space-12) var(--space-10);
+  overflow-y: auto;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ─── Responsivo — esconder painel esquerdo em mobile ─────────── */
+
+@media (max-width: 768px) {
+  .panel {
+    display: none;
+  }
+
+  .formPanel {
+    padding: var(--space-8) var(--space-6);
+  }
+}

@@ -1,3 +1,6 @@
+//decidir se mantem o eslint.config.js do Vite ou o .eslintrc.cjs que já estava no projeto
+//os dois tem coisas que se complementam, o ideal seria fazer uma fusão dos dois arquivos. Verificar antes da entrega final.
+
 // ──────────────────────────────────────────────
 // SAGRES Monitoria — frontend/.eslintrc.cjs
 // ──────────────────────────────────────────────
