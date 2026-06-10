@@ -3,10 +3,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import AuthLayout from '../../components/layout/AuthLayout/AuthLayout'
 import Button from '../../components/common/Button/Button'
 import { EmailSentIcon } from '../../components/common/icons'
-import { reenviarConfirmacao } from '../../services/authService'
+import { reenviarConfirmacao, confirmarEmailMock } from '../../services/authService'
 import { PENDING_EMAIL_KEY } from '../../constants/auth'
 import heroImg from '../../assets/hero.png'
 import styles from './ConfirmEmailPage.module.css'
+
+const IS_MOCK = import.meta.env.VITE_USE_MOCK === 'true'
 
 const COUNTDOWN = 60
 
@@ -84,6 +86,25 @@ function ConfirmEmailPage() {
             altere o e-mail
           </Link>
         </p>
+
+        {IS_MOCK && (
+          <div className={styles.mockSection}>
+            <p className={styles.mockLabel}>Ambiente de desenvolvimento</p>
+            <button
+              type="button"
+              className={styles.mockBtn}
+              onClick={() => {
+                confirmarEmailMock(email)
+                if (email) {
+                  localStorage.setItem(`new_user_pending_dashboard_${email}`, '1')
+                }
+                navigate('/login')
+              }}
+            >
+              Simular abertura do link
+            </button>
+          </div>
+        )}
       </div>
     </AuthLayout>
   )
