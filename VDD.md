@@ -108,7 +108,7 @@ O repositório é um **monorepo** com dois ecossistemas escaneados simultaneamen
 |-------------|-----------|:------------------------:|
 | npm (frontend) | `frontend/package.json` + `package-lock.json` | 35 |
 | Maven (backend) | `backend/pom.xml` | 12 |
-| **Total** | — | **47 libraries + 2 application** = **49 componentes** |
+| **Total** | — | **47 libraries + 2 applications** = **49 componentes** |
 
 Cada componente contém os campos `bom-ref`, `name`, `version`, `type` e `purl`
 (ex.: `pkg:npm/agent-base@6.0.2`, `pkg:maven/br.ufg/sagres@0.0.1-SNAPSHOT`).
