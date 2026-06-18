@@ -2,7 +2,7 @@
 
 **Artefato analisado:** `sbom.json` (raiz do repositório)
 **Baseline:** tag `v1.0.0` — commit `506137595e3b3d884f9c8eb30aa635bb0b2dadc4`
-**Ferramenta:** Trivy 0.71.1 (`trivy fs --format cyclonedx`)
+**Ferramenta:** Trivy 0.71.1 (`trivy fs --format cyclonedx --output sbom.json --offline-scan .`)
 **Formato:** CycloneDX 1.7 (JSON)
 
 ## Análise
