@@ -32,7 +32,7 @@ A seção `dependencies` (50 nós) descreve o grafo de relacionamento entre os c
 
 ## Limitações conhecidas do SBOM
 
-- Sem `--scanners vuln`, o relatório CycloneDX não inclui vulnerabilidades (CVEs); a
+- Sem `--scanners vuln`, o Trivy não popula vulnerabilidades no CycloneDX (campo `vulnerabilities` fica vazio); a
   análise de vulnerabilidades é tratada na seção "Problemas Conhecidos" do VDD.
 - Dependências transitivas do Maven não aparecem (versão herdada do parent não resolvida
   sem build).
