@@ -151,7 +151,7 @@ registrados em `gcs/hashes.txt`. Estes hashes permitem verificação de integrid
 | `gcs/auditoria_ICs.md` | `1F7AED79…6ADD8874` |
 | `gcs/nota-analise-sbom.md` | `5E7B661D…664ABDE8` |
 
-Valores completos em `gcs/hashes.txt`. O hash de `VDD.md` será acrescentado por Ana Luísa
+Valores completos em `gcs/hashes.txt`. O hash de `VDD.md` foi acrescentado por Ana Luísa
 Pereira dos Santos após a finalização do documento (Prática 12, tarefa 7 da responsável pelo
 VDD), pois o VDD é gerado posteriormente.
 
@@ -204,7 +204,7 @@ Get-FileHash -Algorithm SHA256 sbom.json, frontend/package.json, backend/pom.xml
 | Nota de análise do SBOM | Júlia de Souza Nascimento | `gcs/nota-analise-sbom.md` |
 | **Relatório de Auditoria (este documento)** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/relatorio-auditoria.md` |
 | **Hashes SHA-256** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/hashes.txt` |
-| VDD consolidado | Ana Luísa Pereira dos Santos | `VDD.md` (pendente) |
+| VDD consolidado | Ana Luísa Pereira dos Santos | `VDD.md` |
 
 
 
