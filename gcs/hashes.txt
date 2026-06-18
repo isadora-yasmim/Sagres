@@ -1,7 +1,7 @@
 # Hashes Criptográficos SHA-256 — Baseline v1.0.0 (SAGRES Monitoria)
 #
 # Artefato de integridade da Gerência de Configuração (VDD-c / Prática 12, GCS 2026-1).
-# Responsável: Verônica Ribeiro Oliveira Palmeira (P3 — Auditor de Configuração).
+# Responsável: Verônica Ribeiro Oliveira Palmeira (Auditor de Configuração).
 # Baseline auditada: tag v1.0.0 · commit 506137595e3b3d884f9c8eb30aa635bb0b2dadc4 · branch main.
 # Ferramenta: PowerShell Get-FileHash -Algorithm SHA256 (Windows).
 # Gerado em: 2026-06-18.
@@ -17,12 +17,12 @@ FEB8F46E99F4FFDA0144DE49065710B7D73EA1A6B2FE45D9340E42E2A8C41C97  sbom.json
 4B8B005CB267AB5819E4531D5D42AB9AAFAAA79A6C2D69184E703A6048228036  CHANGELOG.md
 1F7AED797620628AB1EEA46DDA70FD089C707972E279D2DD8CB000FD6ADD8874  gcs/auditoria_ICs.md
 5E7B661D16E36DF2EA261830B290B35FCC328EBD6E080B29A154B3D5664ABDE8  gcs/nota-analise-sbom.md
-AEBF15A191437B07894F87DBDDD8C7A90F98F9A6B3FB3A46E37095C4C0A7D113  gcs/relatorio-auditoria.md
+CADC39FF99197C0060CD1B06C407CBE319A5E3C15E03C96E32B3D437B4276F87  gcs/relatorio-auditoria.md
 
 # ------------------------------------------------------------------------------
-# PENDENTE — a ser preenchido por P4 (Gerente de Documentação / VDD):
-#   O arquivo VDD.md é gerado por P4 APÓS a entrega de P2 e P3 (ver Prática 12,
-#   tarefa 7 de P4). Assim que o VDD.md for finalizado, P4 deve gerar o seu
+# PENDENTE — a ser preenchido por Ana Luísa Pereira dos Santos (Gerente de Documentação / VDD):
+#   O arquivo VDD.md é gerado APÓS a entrega do SBOM e da auditoria (ver Prática 12,
+#   tarefa 7 da responsável pelo VDD). Assim que o VDD.md for finalizado, deve-se gerar o
 #   próprio hash SHA-256 e acrescentar a linha abaixo a este arquivo:
 #
 #   <HASH_SHA256>  VDD.md

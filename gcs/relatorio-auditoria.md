@@ -3,7 +3,7 @@
 **Documento:** Relatório de Auditoria Física de Configuração (FCA)
 **Baseline:** `v1.0.0` (BL-MVP)
 **Norma de referência:** IEEE 828-2012 · ISO/IEC/IEEE 12207 (Auditoria de Configuração)
-**Auditor responsável (P3):** Verônica Ribeiro Oliveira Palmeira
+**Auditor responsável:** Verônica Ribeiro Oliveira Palmeira
 **Data da auditoria:** 18/06/2026
 **Disciplina:** Gerência de Configuração de Software — 2026/1 · INF/UFG · Profª Sofia Costa Paiva
 
@@ -24,7 +24,7 @@ tag anotada do Git, conforme registrado no controle de versão do repositório.
 | Branch de origem da release | `main` |
 | Repositório | github.com/isadora-yasmim/Sagres |
 | Total de arquivos versionados na tag | 123 |
-| Responsável pela GC / criação da tag | Isadora Yasmin da Silva (P1 — Release Manager) |
+| Responsável pela GC / criação da tag | Isadora Yasmin da Silva (Release Manager) |
 | Ambiente de build | Java 21 (Spring Boot) · Node.js 18 (Vite/React) · PostgreSQL 16 · Docker |
 
 > **Evidências de identificação (comandos executados):**
@@ -44,24 +44,26 @@ Itens de Configuração (ICs) previstos no Plano de Gerência de Configuração 
 São objetos desta auditoria:
 
 1. **Conferência de presença dos ICs** — cruzamento do catálogo de ICs do PGC com os
-   arquivos efetivamente presentes na tag `v1.0.0` (insumo entregue por P1 em
-   `gcs/auditoria_ICs.md` e reverificado de forma independente por P3 via `git ls-tree`).
+   arquivos efetivamente presentes na tag `v1.0.0` (insumo entregue por Isadora Yasmin da
+   Silva em `gcs/auditoria_ICs.md` e reverificado de forma independente por Verônica Ribeiro
+   Oliveira Palmeira via `git ls-tree`).
 2. **Integridade do checkout** — confirmação de que nenhum arquivo da árvore de trabalho
    foi alterado após a recuperação da baseline (`git status`).
 3. **Geração de hashes criptográficos SHA-256** dos artefatos de configuração, garantindo
    a verificação de integridade independente do Git (`gcs/hashes.txt`).
 
 **Fora do escopo:** auditoria funcional dinâmica (execução de testes/aceitação) e análise
-de vulnerabilidades de dependências (tratada separadamente no SBOM por P2 e consolidada na
-seção "Problemas Conhecidos" do VDD por P4). A inspeção da estrutura do SBOM está
-documentada em `gcs/nota-analise-sbom.md` (P2).
+de vulnerabilidades de dependências (tratada separadamente no SBOM por Júlia de Souza
+Nascimento e consolidada na seção "Problemas Conhecidos" do VDD por Ana Luísa Pereira dos
+Santos). A inspeção da estrutura do SBOM está documentada em `gcs/nota-analise-sbom.md`
+(Júlia de Souza Nascimento).
 
 ---
 
 ## 3. Resultado da Auditoria Física (Catálogo de ICs)
 
 Cruzamento do catálogo de ICs do PGC com os arquivos reais da tag `v1.0.0`. A coluna
-"Presente" foi **reverificada de forma independente** por P3 contra a árvore da tag
+"Presente" foi **reverificada de forma independente** por Verônica Ribeiro Oliveira Palmeira contra a árvore da tag
 (`git ls-tree -r v1.0.0`).
 
 | ID do IC | Descrição (PGC) | Evidência na tag v1.0.0 | Situação |
@@ -108,7 +110,7 @@ Cruzamento do catálogo de ICs do PGC com os arquivos reais da tag `v1.0.0`. A c
 ### 3.2 Observações de auditoria (não-conformidades)
 
 - **OBS-01 — Reconciliação de contagem do catálogo.** O enunciado/PGC referencia
-  nominalmente **26 ICs**, enquanto o catálogo consolidado entregue por P1 enumera **27
+  nominalmente **26 ICs**, enquanto o catálogo consolidado entregue por Isadora Yasmin da Silva enumera **27
   IDs distintos**. Recomenda-se reconciliar a contagem oficial do PGC com o catálogo
   consolidado (provável diferença na inclusão das categorias IC-PROTO-* e/ou IC-TST-*).
   *Impacto: documental; sem efeito sobre a integridade funcional do produto.*
@@ -149,8 +151,9 @@ registrados em `gcs/hashes.txt`. Estes hashes permitem verificação de integrid
 | `gcs/auditoria_ICs.md` | `1F7AED79…6ADD8874` |
 | `gcs/nota-analise-sbom.md` | `5E7B661D…664ABDE8` |
 
-Valores completos em `gcs/hashes.txt`. O hash de `VDD.md` será acrescentado por P4 após
-a finalização do documento (Prática 12 — P4, tarefa 7), pois o VDD é gerado posteriormente.
+Valores completos em `gcs/hashes.txt`. O hash de `VDD.md` será acrescentado por Ana Luísa
+Pereira dos Santos após a finalização do documento (Prática 12, tarefa 7 da responsável pelo
+VDD), pois o VDD é gerado posteriormente.
 
 ### 4.3 Parecer final
 
@@ -195,13 +198,13 @@ Get-FileHash -Algorithm SHA256 sbom.json, frontend/package.json, backend/pom.xml
 
 | Artefato | Responsável | Localização |
 |----------|-------------|-------------|
-| Catálogo de ICs (insumo) | P1 — Isadora Yasmin da Silva | `gcs/auditoria_ICs.md` |
-| CHANGELOG da release | P1 — Isadora Yasmin da Silva | `CHANGELOG.md` |
-| SBOM (CycloneDX) | P2 — Júlia de Souza Nascimento | `sbom.json` |
-| Nota de análise do SBOM | P2 — Júlia de Souza Nascimento | `gcs/nota-analise-sbom.md` |
-| **Relatório de Auditoria (este documento)** | **P3 — Verônica Ribeiro Oliveira Palmeira** | `gcs/relatorio-auditoria.md` |
-| **Hashes SHA-256** | **P3 — Verônica Ribeiro Oliveira Palmeira** | `gcs/hashes.txt` |
-| VDD consolidado | P4 — Ana Luísa Pereira dos Santos | `VDD.md` (pendente) |
+| Catálogo de ICs (insumo) | Isadora Yasmin da Silva | `gcs/auditoria_ICs.md` |
+| CHANGELOG da release | Isadora Yasmin da Silva | `CHANGELOG.md` |
+| SBOM (CycloneDX) | Júlia de Souza Nascimento | `sbom.json` |
+| Nota de análise do SBOM | Júlia de Souza Nascimento | `gcs/nota-analise-sbom.md` |
+| **Relatório de Auditoria (este documento)** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/relatorio-auditoria.md` |
+| **Hashes SHA-256** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/hashes.txt` |
+| VDD consolidado | Ana Luísa Pereira dos Santos | `VDD.md` (pendente) |
 
 
 
