@@ -1,5 +1,5 @@
 # VDD — Version Description Document
-# Projeto SAGRES Monitoria — v1.0.0
+## Projeto SAGRES Monitoria — v1.0.0
 
 **Documento:** Version Description Document (VDD)
 **Baseline:** `v1.0.0` (BL-MVP)
