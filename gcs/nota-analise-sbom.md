@@ -27,7 +27,7 @@ Cada componente traz `bom-ref`, `name`, `version`, `type` e `purl` (ex.:
 nos componentes Maven a licença não foi populada pela mesma limitação de resolução.
 O campo `hashes` **não foi populado em nenhum componente** (0/49) — o scan de
 manifestos do Trivy não calcula hashes de integridade por componente; a integridade
-da baseline é garantida em separado pelos hashes SHA-256 dos arquivos (`hashes.txt`).
+da baseline deve ser garantida em separado por hashes SHA-256 dos arquivos.
 A seção `dependencies` (50 nós) descreve o grafo de relacionamento entre os componentes.
 
 ## Limitações conhecidas do SBOM
