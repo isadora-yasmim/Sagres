@@ -24,7 +24,7 @@ tag anotada do Git, conforme registrado no controle de versão do repositório.
 | Branch de origem da release | `main` |
 | Repositório | github.com/isadora-yasmim/Sagres |
 | Total de arquivos versionados na tag | 123 |
-| Responsável pela GC / criação da tag | Isadora Yasmim da Silva (P1 — Release Manager) |
+| Responsável pela GC / criação da tag | Isadora Yasmin da Silva (P1 — Release Manager) |
 | Ambiente de build | Java 21 (Spring Boot) · Node.js 18 (Vite/React) · PostgreSQL 16 · Docker |
 
 > **Evidências de identificação (comandos executados):**
@@ -195,12 +195,14 @@ Get-FileHash -Algorithm SHA256 sbom.json, frontend/package.json, backend/pom.xml
 
 | Artefato | Responsável | Localização |
 |----------|-------------|-------------|
-| Catálogo de ICs (insumo) | P1 | `gcs/auditoria_ICs.md` |
-| CHANGELOG da release | P1 | `CHANGELOG.md` |
-| SBOM (CycloneDX) | P2 | `sbom.json` |
-| Nota de análise do SBOM | P2 | `gcs/nota-analise-sbom.md` |
-| **Relatório de Auditoria (este documento)** | **P3** | `gcs/relatorio-auditoria.md` |
-| **Hashes SHA-256** | **P3** | `gcs/hashes.txt` |
-| VDD consolidado | P4 | `VDD.md` (pendente) |
+| Catálogo de ICs (insumo) | P1 — Isadora Yasmin da Silva | `gcs/auditoria_ICs.md` |
+| CHANGELOG da release | P1 — Isadora Yasmin da Silva | `CHANGELOG.md` |
+| SBOM (CycloneDX) | P2 — Júlia de Souza Nascimento | `sbom.json` |
+| Nota de análise do SBOM | P2 — Júlia de Souza Nascimento | `gcs/nota-analise-sbom.md` |
+| **Relatório de Auditoria (este documento)** | **P3 — Verônica Ribeiro Oliveira Palmeira** | `gcs/relatorio-auditoria.md` |
+| **Hashes SHA-256** | **P3 — Verônica Ribeiro Oliveira Palmeira** | `gcs/hashes.txt` |
+| VDD consolidado | P4 — Ana Luísa Pereira dos Santos | `VDD.md` (pendente) |
+
+
 
 
