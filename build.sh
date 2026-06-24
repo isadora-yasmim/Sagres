@@ -186,8 +186,8 @@ setup_reproducibility() {
         SOURCE_DATE_EPOCH="$(git -C "$ROOT_DIR" log -1 --pretty=%ct 2>/dev/null || true)"
     fi
     if [[ -z "${SOURCE_DATE_EPOCH:-}" ]]; then
-        warn "SOURCE_DATE_EPOCH ausente; usando epoch fixo. Reprodutibilidade reduzida."
-        SOURCE_DATE_EPOCH="$(date -u +%s)"
+        warn "SOURCE_DATE_EPOCH ausente; usando epoch 0. Reprodutibilidade reduzida."
+        SOURCE_DATE_EPOCH=0
     fi
     export SOURCE_DATE_EPOCH
 
