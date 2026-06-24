@@ -56,7 +56,7 @@ O arquivo CycloneDX gerado contém:
 ### 2.4 Limitações conhecidas
 
 - Dependências transitivas do Maven não capturadas (versões herdadas do `spring-boot-starter-parent` não resolvidas sem build completo).
-- Campo `vulnerabilities` vazio pois o Trivy foi executado sem `--scanners vuln` (análise de vulnerabilidades documentada na Seção 5).
+- Campo `vulnerabilities` vazio pois o Trivy foi executado sem `--scanners vuln` (análise de vulnerabilidades consolidada no VDD, Seção 4).
 - Dependências de desenvolvimento/teste suprimidas por padrão pelo Trivy.
 
 ---
