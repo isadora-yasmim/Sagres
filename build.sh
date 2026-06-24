@@ -433,6 +433,10 @@ main() {
     log "Versão resolvida: ${C_GREEN}${VERSION}${C_RESET}"
     log "Âncora temporal:  ${BUILD_TS} (epoch ${SOURCE_DATE_EPOCH})"
 
+    if have git && git -C "$ROOT_DIR" rev-parse --git-dir >/dev/null 2>&1 && [[ -n "$(git -C "$ROOT_DIR" status --porcelain)" ]]; then
+        warn "Árvore de trabalho suja; este build não corresponde a um commit limpo."
+        [[ "$STRICT" == true ]] && die "Modo --strict: a árvore de trabalho deve estar limpa."
+    fi
     if [[ "$DO_CLEAN" == true && -d "$OUTPUT_DIR" ]]; then
         log "Limpando $OUTPUT_DIR"
         rm -rf "${OUTPUT_DIR:?}"/*
