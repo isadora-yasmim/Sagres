@@ -179,7 +179,7 @@ resolve_version() {
 # ── Determinismo: âncora temporal a partir do commit ─────────────────────────
 setup_reproducibility() {
     export TZ=UTC
-    export LC_ALL="${LC_ALL:-C.UTF-8}"
+    export LC_ALL="${LC_ALL:-C}"
 
     if [[ -z "${SOURCE_DATE_EPOCH:-}" ]] && have git \
         && git -C "$ROOT_DIR" rev-parse --git-dir >/dev/null 2>&1; then
