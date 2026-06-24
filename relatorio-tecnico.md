@@ -150,7 +150,7 @@ O build do SAGRES Monitoria é **determinístico**: dado o mesmo commit, o mesmo
 |--------|---------------|
 | Âncora temporal | `SOURCE_DATE_EPOCH` = timestamp do commit (`git log -1 --pretty=%ct`) |
 | Timestamps do JAR | `-Dproject.build.outputTimestamp` (normaliza entradas do JAR Spring Boot) |
-| Ambiente neutro | `TZ=UTC` e `LC_ALL=C.UTF-8` durante todo o build |
+| Ambiente neutro | `TZ=UTC` e `LC_ALL=C` durante todo o build |
 | Dependências travadas | `npm ci` (lockfile obrigatório) no frontend; `mvn -B` no backend |
 | Empacotamento estável | `tar --sort=name --mtime=@EPOCH --owner=0 --group=0` + `gzip -n` |
 
