@@ -37,7 +37,7 @@ metadados de integridade da baseline.
 Variáveis de ambiente equivalentes: `SAGRES_VERSION`, `SAGRES_OUTPUT_DIR`,
 `SAGRES_MAVEN_IMAGE`, `NO_COLOR`.
 
-> **Windows:** execute via **Git Bash** ou **WSL** (o script é Bash POSIX-friendly).
+> **Windows:** execute via **Git Bash** ou **WSL** (o script requer Bash; não é POSIX `sh`).
 
 ---
 
