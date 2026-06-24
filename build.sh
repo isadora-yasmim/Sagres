@@ -439,8 +439,7 @@ main() {
     fi
     if [[ "$DO_CLEAN" == true && -d "$OUTPUT_DIR" ]]; then
         log "Limpando $OUTPUT_DIR"
-        rm -rf "${OUTPUT_DIR:?}"/*
-    fi
+        find "$OUTPUT_DIR" -mindepth 1 -exec rm -rf -- {} +
     mkdir -p "$OUTPUT_DIR"
 
     [[ "$BUILD_BACKEND"  == true ]] && build_backend
