@@ -159,7 +159,7 @@ resolve_version() {
         if git -C "$ROOT_DIR" describe --tags --exact-match HEAD >/dev/null 2>&1; then
             local tag; tag="$(git -C "$ROOT_DIR" describe --tags --exact-match HEAD)"
             v="${tag#v}"
-            [[ -n "$dirty" ]] && v="${v}+${sha}${dirty#.}"
+            [[ -n "$dirty" ]] && v="${v}+g${sha}${dirty}"
         elif git -C "$ROOT_DIR" describe --tags --abbrev=0 >/dev/null 2>&1; then
             local base count
             base="$(git -C "$ROOT_DIR" describe --tags --abbrev=0)"
