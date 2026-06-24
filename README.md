@@ -136,6 +136,20 @@ npm run dev
 
 ---
 
+## Build de Release
+
+Para gerar os artefatos liberáveis (JAR do backend, bundle do frontend, SBOM,
+checksums e manifesto) de forma **reprodutível** e **versionada (SemVer)**:
+
+```bash
+./build.sh            # build completo → dist/
+./build.sh --help     # todas as opções
+```
+
+Detalhes de uso, determinismo e reprodutibilidade em [BUILD.md](BUILD.md).
+
+---
+
 ## Lint e Formatação
 
 ```bash
