@@ -204,7 +204,7 @@ Get-FileHash -Algorithm SHA256 sbom.json, frontend/package.json, backend/pom.xml
 | Nota de análise do SBOM | Júlia de Souza Nascimento | `gcs/nota-analise-sbom.md` |
 | **Relatório de Auditoria (este documento)** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/relatorio-auditoria.md` |
 | **Hashes SHA-256** | **Verônica Ribeiro Oliveira Palmeira** | `gcs/hashes.txt` |
-| VDD consolidado | Ana Luísa Pereira dos Santos | `VDD.md` |
+| VDD consolidado | Ana Luísa Pereira dos Santos | `gcs/VDD.md` |
 
 
 

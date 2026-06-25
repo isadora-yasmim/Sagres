@@ -135,7 +135,7 @@ Gerados por **Verônica Ribeiro Oliveira Palmeira** (Auditora de Configuração)
 | `gcs/auditoria_ICs.md` | `1F7AED797620628AB1EEA46DDA70FD089C707972E279D2DD8CB000FD6ADD8874` |
 | `gcs/nota-analise-sbom.md` | `5E7B661D16E36DF2EA261830B290B35FCC328EBD6E080B29A154B3D5664ABDE8` |
 | `gcs/relatorio-auditoria.md` | `CADC39FF99197C0060CD1B06C407CBE319A5E3C15E03C96E32B3D437B4276F87` |
-| `VDD.md` (este documento) | `41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF` |
+| `gcs/VDD.md` (este documento) | `41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF` |
 
 ### 3.4 Hash SHA-256 do VDD.md
 
@@ -147,7 +147,7 @@ Get-FileHash VDD.md -Algorithm SHA256
 
 | Artefato | SHA-256 |
 |----------|---------|
-| `VDD.md` | *41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF* |
+| `gcs/VDD.md` | *41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF* |
 
 ---
 
@@ -197,7 +197,7 @@ Conforme registrado no Relatório de Auditoria Física (`gcs/relatorio-auditoria
 
 | Artefato | Responsável | Papel |
 |----------|-------------|-------|
-| Clone, checkout da tag, Issues, CHANGELOG.md, auditoria_ICs.md | Isadora Yasmin da Silva | Release Manager (P1) |
-| sbom.json, nota-analise-sbom.md | Júlia de Souza Nascimento | Engenheira de SBOM (P2) |
-| relatorio-auditoria.md, hashes.txt | Verônica Ribeiro Oliveira Palmeira | Auditora de Configuração (P3) |
-| **VDD.md (este documento)** | **Ana Luísa Pereira dos Santos** | **Gerente de Documentação (P4)** |
+| Clone, checkout da tag, Issues, CHANGELOG.md, auditoria_ICs.md | Isadora Yasmin da Silva | Release Manager |
+| sbom.json, nota-analise-sbom.md | Júlia de Souza Nascimento | Engenheira de SBOM |
+| relatorio-auditoria.md, hashes.txt | Verônica Ribeiro Oliveira Palmeira | Auditora de Configuração |
+| **VDD.md (este documento)** | **Ana Luísa Pereira dos Santos** | **Gerente de Documentação** |

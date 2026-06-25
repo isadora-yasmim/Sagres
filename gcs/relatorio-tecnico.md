@@ -1,18 +1,18 @@
 # Relatório Técnico — Gerência de Configuração de Software
 ## Etapa 2: SBOM, VDD e Script de Build
 
-**Projeto:** SAGRES Monitoria — Plataforma de Monitoria Acadêmica da UFG
+**Projeto:** SAGRES Monitoria — Plataforma de Monitoria Acadêmica
 **Baseline:** `v1.0.0` (BL-MVP) · commit `506137595e3b3d884f9c8eb30aa635bb0b2dadc4`
 **Repositório:** https://github.com/isadora-yasmim/Sagres
 **Disciplina:** Gerência de Configuração de Software — 2026/1 · INF/UFG
 **Professora:** Sofia Costa Paiva
 **Grupo:**
+- Ana Luísa Pereira dos Santos
 - Isadora Yasmin da Silva
 - Júlia de Souza Nascimento
 - Verônica Ribeiro Oliveira Palmeira
-- Ana Luísa Pereira dos Santos
 
-**Data:** 2026-06-24
+**Data:** 24-06-2026
 
 ---
 
@@ -99,7 +99,7 @@ O hash SHA-256 do `VDD.md` foi gerado após sua finalização e registrado tanto
 
 | Artefato | SHA-256 |
 |----------|---------|
-| `VDD.md` | `41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF` |
+| `gcs/VDD.md` | `41966B6A7C15A8CACC7CACF8C4E66E594D7EB94710C5AAE27A778BC87E51ECBF` |
 
 ---
 
